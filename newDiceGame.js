@@ -9,7 +9,7 @@ function rollDie(dieNumber) {
 
 function gameLevel() {
 	let level = [];
-	level = [zone(), move(), battle(), move(), battle(), move(), battle(), battle(), battle()];
+	level = [zone(), move(), battle(), move(), battle(), move(), battle(), move(), battle(), battle()];
 	for (i = 0; i < level.length; i++) {
 
 	}
@@ -87,30 +87,30 @@ function getMonster() {
 }
 
 function battle() {
-	let monster = getMonster()
-	alert("You have entered a battle against a " + monster)
-	let result = die4()
+	let monster = getMonster();
+	alert("You have entered a battle against a " + monster);
+	let result = die4();
 	if (result === 1) {
 		alert("The " + monster + " has struck you")
-		injuries()
+		injuries();
 	}
 	else if (result === 2) {
 		alert("You have struck the " + monster + " and it has retreated")
 	}
 	else {
 		alert("You have blocked the " + monster + "'s attack")
-			battleRoundTwo(monster)
+			battleRoundTwo(monster);
 	}
 	}
 function battleRoundTwo(monster) {
 	let opponent = monster
-	let result = die4()
+	let result = die4();
 		if (result >= 2) {
 			alert("You have struck back, dealing fatal damage to the " + opponent);
 		}
 		else if( result === 3){
 			alert("The " + opponent + " has struck you")
-			injuries()
+			injuries();
 		}
 		else
 
